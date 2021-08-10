@@ -1,0 +1,13 @@
+{
+    "editor.formatOnSave": true,
+    "yaml.format.enable": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--skip-string-normalization"
+    ],
+    "editor.rulers": [
+        88
+    ],
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
+}
