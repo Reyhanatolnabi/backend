@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                 ('national_code', models.CharField(max_length=10)),
                 ('mobile', models.CharField(max_length=11)),
                 ('address', models.CharField(max_length=500)),
-                ('avatar', models.ImageField(blank=True, null=True, upload_to=persons.models.get_file_path)),
+                ('avatar', models.ImageField(blank=True, null=True, upload_to=persons.models.get_person_avatar_path)),
                 ('email_confirmed', models.BooleanField(default=False)),
                 ('mobile_confirmed', models.BooleanField(default=False)),
                 ('description', models.CharField(blank=True, max_length=2000, null=True)),
