@@ -55,6 +55,7 @@ class MyUser(AbstractBaseUser):
         verbose_name="تایدیه شماره همراه",
     )
     is_active = models.BooleanField(default=True, verbose_name="فعال")
+    is_staff = models.BooleanField(default=False, verbose_name="پرسنل")
     is_admin = models.BooleanField(default=False, verbose_name="مدیر")
     avatar = models.ImageField(
         upload_to=get_person_avatar_path,
@@ -78,10 +79,6 @@ class MyUser(AbstractBaseUser):
 
     def has_module_perms(self, app_label):
         return True
-
-    @property
-    def is_staff(self):
-        return self.is_admin
 
     class Meta:
         verbose_name = "کاربر"

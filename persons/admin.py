@@ -58,6 +58,7 @@ class MyUserAdmin(BaseUserAdmin):
                 'fields': (
                     'is_admin',
                     'is_active',
+                    'is_staff',
                     'email_confirm',
                     'mobile_confirm',
                 )
