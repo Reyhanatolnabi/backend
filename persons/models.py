@@ -57,6 +57,7 @@ class MyUser(AbstractBaseUser):
     is_active = models.BooleanField(default=True, verbose_name="فعال")
     is_staff = models.BooleanField(default=False, verbose_name="پرسنل")
     is_admin = models.BooleanField(default=False, verbose_name="مدیر")
+
     avatar = models.ImageField(
         upload_to=get_person_avatar_path,
         blank=True,
