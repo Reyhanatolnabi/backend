@@ -18,11 +18,11 @@ from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
 
-
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("account/", include('account.urls')),
     path("blog/", include('blog.urls')),
+    path("persons/", include('persons.urls')),
     path('api-auth/', include('rest_framework.urls')),
 ]
 
