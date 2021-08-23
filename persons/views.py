@@ -18,7 +18,7 @@ class UsersList(ListAPIView):
 class UserDetail(RetrieveAPIView):
     queryset = MyUser.objects.all()
     serializer_class = MyUserSerializer
-    permission_classes = (IsAdminUser,)
+    permission_classes = (IsUser,)
 
 
 # create new user only by admin
@@ -32,4 +32,6 @@ class CreateUser(CreateAPIView):
 class UpdateUser(RetrieveUpdateAPIView):
     queryset = MyUser.objects.all()
     serializer_class = MyUserSerializer
-    permission_classes = (IsAdminUser, IsUser)
+    permission_classes = (IsUser,)
+
+
