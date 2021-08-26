@@ -32,12 +32,21 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
+    "django.contrib.sites",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
     "rest_framework",
     "rest_framework.authtoken",
+
+    'allauth',
+    # 'allauth.account',
+    # 'allauth.socialaccount',
+    'dj_rest_auth',
+    'dj_rest_auth.registration',
+
     # My Applications
     "persons.apps.PersonsConfig",
     "account.apps.AccountConfig",
@@ -139,3 +148,4 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ]
 }
+SITE_ID = 1
