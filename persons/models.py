@@ -21,13 +21,19 @@ mobile_number_regex = RegexValidator(
 )
 
 
-class MyUser(AbstractBaseUser):
-
-    username = models.CharField(max_length=50, unique=True, verbose_name="نام کاربری")
+class NotRegistered(AbstractBaseUser):
     first_name = models.CharField(max_length=200, blank=True, verbose_name="نام")
     last_name = models.CharField(
         max_length=200, blank=True, verbose_name="نام خانوادگی"
     )
+
+    class Meta:
+        abstract = True
+
+
+class MyUser(NotRegistered):
+    username = models.CharField(max_length=50, unique=True, verbose_name="نام کاربری")
+
     email = models.EmailField(
         unique=True, validators=[EmailValidator], verbose_name="ایمیل"
     )
