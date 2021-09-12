@@ -26,7 +26,7 @@ class CreateProduct(CreateAPIView):
 
 
 # update specific user details
-class UpdateUser(RetrieveUpdateAPIView):
+class UpdateProduct(RetrieveUpdateAPIView):
     queryset = Products.objects.all()
     serializer_class = ProductsSerializer
     permission_classes = (IsUser,)

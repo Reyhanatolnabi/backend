@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     # My Applications
     "persons.apps.PersonsConfig",
     "account.apps.AccountConfig",
+    "charity.apps.CharityConfig",
     "blog.apps.BlogConfig",
 ]
 
